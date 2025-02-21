@@ -66,51 +66,38 @@
 </script>
 <script type='text/javascript' src='https://chargefuze--partial.sandbox.my.site.com/ESWPOCTest1729120581745/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 	<form action="https://chargefuze--partial.sandbox.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00DO9000007wKVN" method="POST">
-    <input type="hidden" name="orgid" value="00DO9000007wKVN">
-    <input type="hidden" name="retURL" value="https://www.chargefuze.com/">
 
-    <!-- Optional debugging elements -->
-    <!-- 
-    <input type="hidden" name="debug" value="1">
-    <input type="hidden" name="debugEmail" value="guerrerocesarw22@gmail.com"> 
-    -->
+<input type=hidden name="orgid" value="00DO9000007wKVN">
+<input type=hidden name="retURL" value="https://www.chargefuze.com/">
+<input type=hidden name="recordtypeid" value="012O9000005RehdIAC">
+<input type=hidden name="ownerid" value="00GO900000DC6DTMA1">
+<!--  ----------------------------------------------------------------------  -->
+<!--  NOTE: These fields are optional debugging elements. Please uncomment    -->
+<!--  these lines if you wish to test in debug mode.                          -->
+<!--  <input type="hidden" name="debug" value=1>                              -->
+<!--  <input type="hidden" name="debugEmail"                                  -->
+<!--  value="guerrerocesarw22@gmail.com">                                     -->
+<!--  ----------------------------------------------------------------------  -->
 
-    <label for="name">Name</label>
-    <input id="name" name="name" type="text" maxlength="80" required>
+<label for="name">Contact Name</label><input  id="name" maxlength="80" name="name" size="20" type="text" /><br>
 
-    <label for="email">Email</label>
-    <input id="email" name="email" type="text" maxlength="80" required>
+<label for="email">Email</label><input  id="email" maxlength="80" name="email" size="20" type="text" /><br>
 
-    <label for="phone">Phone</label>
-    <input id="phone" name="phone" type="text" maxlength="40">
+<label for="phone">Phone</label><input  id="phone" maxlength="40" name="phone" size="20" type="text" /><br>
 
-    <label for="subject">Subject</label>
-    <input id="subject" name="subject" type="text" maxlength="80" required>
+Category:<select  id="00NO900000BQ7qj" name="00NO900000BQ7qj" title="Category"><option value="">--None--</option><option value="Battery Issue">Battery Issue</option>
+<option value="Power Bank Issue">Power Bank Issue</option>
+<option value="Return a Power Bank">Return a Power Bank</option>
+<option value="Billing Error">Billing Error</option>
+<option value="General Inquiry">General Inquiry</option>
+<option value="Other">Other</option>
+</select><br>
 
-    <label for="description">Description</label>
-    <textarea id="description" name="description" rows="4" required></textarea>
+<label for="description">Description</label><textarea name="description"></textarea><br>
 
-    <label for="type">Type</label>
-    <select id="type" name="type">
-        <option value="">--None--</option>
-        <option value="Technical Support">Technical Support</option>
-        <option value="Feature Request">Feature Request</option>
-        <option value="Data Upload">Data Upload</option>
-        <option value="Question">Question</option>
-    </select>
+<input type="submit" name="submit">
 
-    <label for="reason">Case Reason</label>
-    <select id="reason" name="reason">
-        <option value="">--None--</option>
-        <option value="User didn't attend training">User didn't attend training</option>
-        <option value="Complex functionality">Complex functionality</option>
-        <option value="Existing problem">Existing problem</option>
-        <option value="Instructions not clear">Instructions not clear</option>
-        <option value="New problem">New problem</option>
-    </select>
-
-
-    <input type="submit" name="submit" value="Submit">
 </form>
+
 </body>
 </html>
