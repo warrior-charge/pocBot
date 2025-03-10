@@ -47,7 +47,7 @@
     </style>
 </head>
 <body>
-    <h1>Partial SB</h1>
+    <h1>Partial SB-Captcha</h1>
 
     <script type='text/javascript'>
 	function initEmbeddedMessaging() {
@@ -68,7 +68,10 @@
 	};
 </script>
 <script type='text/javascript' src='https://chargefuze--partial.sandbox.my.site.com/ESWPOCTest1729120581745/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
-	<form action="https://chargefuze--partial.sandbox.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00DO9000007wKVN" method="POST">
+	<!-- Add reCAPTCHA script -->
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<form action="https://chargefuze--partial.sandbox.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00DO9000007wKVN" method="POST">
+	<div class="g-recaptcha" data-sitekey="6Ld3dPAqAAAAAFxgl37ooduRm-x2rCLJfvJSQifv"></div>
 
 <input type=hidden name="orgid" value="00DO9000007wKVN">
 <input type=hidden name="retURL" value="https://www.chargefuze.com/">
