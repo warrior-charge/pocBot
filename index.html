@@ -47,7 +47,7 @@
     </style>
 </head>
 <body>
-    <h1>Partial SB- with Captcha</h1>
+    <h1>Partial SB- with Captcha2</h1>
 <!--
     <script type='text/javascript'>
 	function initEmbeddedMessaging() {
@@ -69,13 +69,7 @@
 </script>
 <script type='text/javascript' src='https://chargefuze--partial.sandbox.my.site.com/ESWPOCTest1729120581745/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>-->
 	<!-- Add reCAPTCHA script -->
- <script src="https://www.google.com/recaptcha/enterprise.js?render=6Ld3dPAqAAAAAFxgl37ooduRm-x2rCLJfvJSQifv"></script>
-	
-<script>
-  function onSubmit(token) {
-    document.getElementById("web-to-case-form").submit();
-  }
-</script>
+ <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
 <form action="https://chargefuze--partial.sandbox.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00DO9000007wKVN" method="POST" id="web-to-case-form">
 
 <input type=hidden name="orgid" value="00DO9000007wKVN">
@@ -110,10 +104,8 @@ How can we help you today?<select  id="00NO900000BQ7qj" name="00NO900000BQ7qj" t
 
 <label for="description">Let us know any details about your inquiry.</label><textarea name="description"></textarea><br>
 
-<input type="submit" name="submit" class="g-recaptcha"
-    data-sitekey="6Ld3dPAqAAAAAFxgl37ooduRm-x2rCLJfvJSQifv"
-    data-callback='onSubmit'
-    data-action='submit'>  
+<input type="submit" name="submit" >  
+	<div class="g-recaptcha" data-sitekey="6LfSE-8qAAAAAJLv0FcrICZ5bnmcbddvFBll5IJ1" data-action="LOGIN"></div>
 </form>
 
 </form>
