@@ -91,7 +91,7 @@ setInterval(timestamp, 500);
             var captchaResponse = document.getElementById("g-recaptcha-response");
 		console.log('captchaRespons e'+captchaResponse);
             // Enable submit button if reCAPTCHA is completed
-            submitButton.disabled = captchaResponse.trim() === "";
+            submitButton.disabled = false;
         }
 	function onCaptchaCompleted() {
 		console.log('captcha clicked');
