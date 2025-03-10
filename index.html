@@ -47,7 +47,7 @@
     </style>
 </head>
 <body>
-    <h1>Partial SB-Captcha</h1>
+    <h1>Partial SB- Google Captcha</h1>
 
     <script type='text/javascript'>
 	function initEmbeddedMessaging() {
@@ -69,7 +69,13 @@
 </script>
 <script type='text/javascript' src='https://chargefuze--partial.sandbox.my.site.com/ESWPOCTest1729120581745/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
 	<!-- Add reCAPTCHA script -->
-<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+ <script src="https://www.google.com/recaptcha/enterprise.js?render=6Ld3dPAqAAAAAFxgl37ooduRm-x2rCLJfvJSQifv"></script>
+	<!-- Replace the variables below. -->
+<script>
+  function onSubmit(token) {
+    document.getElementById("demo-form").submit();
+  }
+</script>
 <form action="https://chargefuze--partial.sandbox.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00DO9000007wKVN" method="POST">
 	<div class="g-recaptcha" data-sitekey="6Ld3dPAqAAAAAFxgl37ooduRm-x2rCLJfvJSQifv"></div>
 
@@ -105,7 +111,10 @@ How can we help you today?<select  id="00NO900000BQ7qj" name="00NO900000BQ7qj" t
 
 <label for="description">Let us know any details about your inquiry.</label><textarea name="description"></textarea><br>
 
-<input type="submit" name="submit"> 
+<input type="submit" name="submit" class="g-recaptcha"
+    data-sitekey="6Ld3dPAqAAAAAFxgl37ooduRm-x2rCLJfvJSQifv"
+    data-callback='onSubmit'
+    data-action='submit'> 
 
 </form>
 
