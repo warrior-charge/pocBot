@@ -51,7 +51,7 @@
     </style>
 </head>
 <body>
-    <h1>Partial SB- CAPTCHA </h1>
+    <h1>Partial SB - CAPTCHA </h1>
 <!--
     <script type='text/javascript'>
 	function initEmbeddedMessaging() {
@@ -91,7 +91,11 @@ setInterval(timestamp, 500);
             var captchaResponse = document.getElementById("g-recaptcha-response");
 		console.log('captchaRespons e'+captchaResponse);
             // Enable submit button if reCAPTCHA is completed
-            submitButton.disabled = captchaResponse.value.trim() === "";
+            submitButton.disabled = false;
+        }
+	function onCaptchaCompleted() {
+		console.log('captcha clicked');
+            enableSubmitButton();
         }
 </script>
 	
@@ -128,7 +132,7 @@ How can we help you today?<select  id="00NO900000BQ7qj" name="00NO900000BQ7qj" t
 </select><br>
 
 <label for="description">Let us know any details about your inquiry.</label><textarea name="description"></textarea><br>
-<div class="g-recaptcha" data-sitekey="6LfXkPAqAAAAANq320dZoQxGW-tLW7hVAMiI55Aw" onchange="enableSubmitButton()"></div><br>
+<div class="g-recaptcha" data-sitekey="6LfXkPAqAAAAANq320dZoQxGW-tLW7hVAMiI55Aw" onchange="onCaptchaCompleted()"></div><br>
 <input type="submit" name="submit" id="submit-button" disabled>   
 </form>
 
