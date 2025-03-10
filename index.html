@@ -47,7 +47,7 @@
     </style>
 </head>
 <body>
-    <h1>Partial SB- captcha </h1>
+    <h1>Partial SB- Captcha </h1>
 <!--
     <script type='text/javascript'>
 	function initEmbeddedMessaging() {
@@ -85,6 +85,7 @@ setInterval(timestamp, 500);
 	function enableSubmitButton() {
             var submitButton = document.getElementById("submit-button");
             var captchaResponse = document.getElementById("g-recaptcha-response");
+		console.log('captchaRespons e'+captchaResponse);
             // Enable submit button if reCAPTCHA is completed
             submitButton.disabled = captchaResponse.value.trim() === "";
         }
