@@ -44,10 +44,14 @@
         input[type="submit"]:hover {
             background-color: #000000;
         }
+	input[type="submit"]:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
     </style>
 </head>
 <body>
-    <h1>Partial SB- Captcha </h1>
+    <h1>Partial SB- CAPTCHA </h1>
 <!--
     <script type='text/javascript'>
 	function initEmbeddedMessaging() {
@@ -124,7 +128,7 @@ How can we help you today?<select  id="00NO900000BQ7qj" name="00NO900000BQ7qj" t
 </select><br>
 
 <label for="description">Let us know any details about your inquiry.</label><textarea name="description"></textarea><br>
-<div class="g-recaptcha" data-sitekey="6LfXkPAqAAAAANq320dZoQxGW-tLW7hVAMiI55Aw"></div><br>
+<div class="g-recaptcha" data-sitekey="6LfXkPAqAAAAANq320dZoQxGW-tLW7hVAMiI55Aw" onchange="enableSubmitButton()"></div><br>
 <input type="submit" name="submit" id="submit-button" disabled>   
 </form>
 
