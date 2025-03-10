@@ -47,7 +47,7 @@
     </style>
 </head>
 <body>
-    <h1>Partial SB- with Captcha2</h1>
+    <h1>Partial SB- captcha update</h1>
 <!--
     <script type='text/javascript'>
 	function initEmbeddedMessaging() {
@@ -68,10 +68,16 @@
 	};
 </script>
 <script type='text/javascript' src='https://chargefuze--partial.sandbox.my.site.com/ESWPOCTest1729120581745/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>-->
-	<!-- Add reCAPTCHA script -->
- <script src="https://www.google.com/recaptcha/enterprise.js" async defer></script>
+ <!-- Add reCAPTCHA script -->
+ 
+<META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
+<script src="https://www.google.com/recaptcha/api.js"></script>
+<script>
+ function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500); 
+</script>
+	
 <form action="https://chargefuze--partial.sandbox.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00DO9000007wKVN" method="POST" id="web-to-case-form">
-
+<input type=hidden name='captcha_settings' value='{"keyname":"personalKeys","fallback":"true","orgId":"00DO9000007wKVN","ts":""}'>
 <input type=hidden name="orgid" value="00DO9000007wKVN">
 <input type=hidden name="retURL" value="https://www.chargefuze.com/">
 <input type=hidden id="recordType" name="recordtypeid" value="012O9000005RehdIAC">
@@ -103,9 +109,8 @@ How can we help you today?<select  id="00NO900000BQ7qj" name="00NO900000BQ7qj" t
 </select><br>
 
 <label for="description">Let us know any details about your inquiry.</label><textarea name="description"></textarea><br>
-
-<input type="submit" name="submit" >  
-	<div class="g-recaptcha" data-sitekey="6LfSE-8qAAAAAJLv0FcrICZ5bnmcbddvFBll5IJ1" data-action="LOGIN"></div>
+<div class="g-recaptcha" data-sitekey="6LfXkPAqAAAAANq320dZoQxGW-tLW7hVAMiI55Aw"></div><br>
+<input type="submit" name="submit" >   
 </form>
 
 </form>
