@@ -47,7 +47,7 @@
     </style>
 </head>
 <body>
-    <h1>Partial SB- captcha update</h1>
+    <h1>Partial SB- captcha </h1>
 <!--
     <script type='text/javascript'>
 	function initEmbeddedMessaging() {
@@ -73,7 +73,21 @@
 <META HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
 <script src="https://www.google.com/recaptcha/api.js"></script>
 <script>
- function timestamp() { var response = document.getElementById("g-recaptcha-response"); if (response == null || response.value.trim() == "") {var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);elems["ts"] = JSON.stringify(new Date().getTime());document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); } } setInterval(timestamp, 500); 
+ function timestamp() {
+	 var response = document.getElementById("g-recaptcha-response"); 
+	 if (response == null || response.value.trim() == "") {
+		 var elems = JSON.parse(document.getElementsByName("captcha_settings")[0].value);
+		 elems["ts"] = JSON.stringify(new Date().getTime());
+		 document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); 
+	 } 
+} 
+setInterval(timestamp, 500); 
+	function enableSubmitButton() {
+            var submitButton = document.getElementById("submit-button");
+            var captchaResponse = document.getElementById("g-recaptcha-response");
+            // Enable submit button if reCAPTCHA is completed
+            submitButton.disabled = captchaResponse.value.trim() === "";
+        }
 </script>
 	
 <form action="https://chargefuze--partial.sandbox.my.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00DO9000007wKVN" method="POST" id="web-to-case-form">
@@ -110,7 +124,7 @@ How can we help you today?<select  id="00NO900000BQ7qj" name="00NO900000BQ7qj" t
 
 <label for="description">Let us know any details about your inquiry.</label><textarea name="description"></textarea><br>
 <div class="g-recaptcha" data-sitekey="6LfXkPAqAAAAANq320dZoQxGW-tLW7hVAMiI55Aw"></div><br>
-<input type="submit" name="submit" >   
+<input type="submit" name="submit" id="submit-button" disabled>   
 </form>
 
 </form>
