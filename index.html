@@ -86,7 +86,9 @@
 		 elems["ts"] = JSON.stringify(new Date().getTime());
 		 document.getElementsByName("captcha_settings")[0].value = JSON.stringify(elems); 
 		 submitButton.disabled = true;
-	 } 
+	 } else{
+		 enableSubmitButton(); 
+	 }
 } 
 setInterval(timestamp, 500); 
 	function enableSubmitButton() {
